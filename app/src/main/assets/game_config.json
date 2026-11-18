@@ -1,0 +1,28 @@
+{
+  "plants": [
+    { "id": "moon_flower", "name": "Лунный цветок", "emoji": "🌸", "description": "Светится мягким серебристым светом в сумерках.", "growthTimeSeconds": 30, "yield": 2, "biomeId": "misty_forest" },
+    { "id": "sun_herb", "name": "Солнечная трава", "emoji": "🌿", "description": "Накапливает тепло полуденного солнца в листьях.", "growthTimeSeconds": 45, "yield": 3, "biomeId": "misty_forest" },
+    { "id": "dew_berry", "name": "Росянка", "emoji": "🫐", "description": "Ягоды, наполненные утренней росой.", "growthTimeSeconds": 60, "yield": 2, "biomeId": "misty_forest" },
+    { "id": "glow_shroom", "name": "Светящийся гриб", "emoji": "🍄", "description": "Растет в сырых пещерах и освещает путь.", "growthTimeSeconds": 90, "yield": 2, "biomeId": "whispering_caves" },
+    { "id": "crystal_moss", "name": "Хрустальный мох", "emoji": "🌱", "description": "Звенит как колокольчик при прикосновении.", "growthTimeSeconds": 120, "yield": 3, "biomeId": "whispering_caves" },
+    { "id": "ember_root", "name": "Угольный корень", "emoji": "🫚", "description": "Теплый на ощупь корень из вулканической почвы.", "growthTimeSeconds": 180, "yield": 2, "biomeId": "amber_cliffs" },
+    { "id": "star_fern", "name": "Звездный папоротник", "emoji": "🪴", "description": "Листья усыпаны золотистой пыльцой.", "growthTimeSeconds": 240, "yield": 3, "biomeId": "amber_cliffs" }
+  ],
+  "recipes": [
+    { "id": "herbal_tea", "name": "Травяной отвар", "emoji": "🍵", "description": "Согревает и восстанавливает силы в лесу.", "ingredients": { "moon_flower": 2, "sun_herb": 1 }, "craftTimeSeconds": 15 },
+    { "id": "dew_lantern", "name": "Фонарь из росы", "emoji": "🏮", "description": "Освещает темные тропы пещер.", "ingredients": { "dew_berry": 2, "glow_shroom": 1 }, "craftTimeSeconds": 25 },
+    { "id": "crystal_compass", "name": "Хрустальный компас", "emoji": "🧭", "description": "Помогает не сбиться с пути на скалах.", "ingredients": { "crystal_moss": 2, "sun_herb": 2 }, "craftTimeSeconds": 40 },
+    { "id": "ember_elixir", "name": "Эликсир жара", "emoji": "🧪", "description": "Защищает от холодного ветра вершин.", "ingredients": { "ember_root": 2, "star_fern": 1 }, "craftTimeSeconds": 60 }
+  ],
+  "biomes": [
+    { "id": "misty_forest", "name": "Туманный лес", "emoji": "🌲", "description": "Тихий лес, укутанный утренним туманом.", "unlockedByDefault": true, "unlockCost": {}, "expeditionDurationSeconds": 45, "requiredSupplies": { "herbal_tea": 1 }, "possibleRewards": ["moon_flower", "sun_herb", "dew_berry"], "homunculusEggChance": 0.35 },
+    { "id": "whispering_caves", "name": "Шепчущие пещеры", "emoji": "🪨", "description": "Глубокие гроты со светящимися кристаллами.", "unlockedByDefault": false, "unlockCost": { "moon_flower": 5, "dew_berry": 3 }, "expeditionDurationSeconds": 90, "requiredSupplies": { "dew_lantern": 1 }, "possibleRewards": ["glow_shroom", "crystal_moss"], "homunculusEggChance": 0.45 },
+    { "id": "amber_cliffs", "name": "Янтарные утесы", "emoji": "⛰️", "description": "Высокие скалы, залитые закатным светом.", "unlockedByDefault": false, "unlockCost": { "glow_shroom": 4, "crystal_moss": 4 }, "expeditionDurationSeconds": 150, "requiredSupplies": { "crystal_compass": 1, "ember_elixir": 1 }, "possibleRewards": ["ember_root", "star_fern"], "homunculusEggChance": 0.60 }
+  ],
+  "homunculi": [
+    { "id": "spore_sprite", "name": "Споровый дух", "emoji": "🧚", "description": "Ускоряет рост растений в оранжерее на 15%.", "bonusType": "growth_speed", "bonusValue": 0.15 },
+    { "id": "cauldron_imp", "name": "Котельный огонек", "emoji": "🔥", "description": "Ускоряет варку припасов в лаборатории на 20%.", "bonusType": "craft_speed", "bonusValue": 0.20 },
+    { "id": "trail_fox", "name": "Троповой лис", "emoji": "🦊", "description": "Сокращает время экспедиций по острову на 15%.", "bonusType": "expedition_speed", "bonusValue": 0.15 },
+    { "id": "harvest_owl", "name": "Сова-собиратель", "emoji": "🦉", "description": "Увеличивает шанс найти редкие семена в походе.", "bonusType": "extra_yield", "bonusValue": 0.25 }
+  ]
+}
